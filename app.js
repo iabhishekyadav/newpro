@@ -13,7 +13,7 @@ app.set("views" , path.join(__dirname + "/views"));
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
-//app.use(require('./routes/router'))
+app.use(require('./routes/router'))
 
 
 
