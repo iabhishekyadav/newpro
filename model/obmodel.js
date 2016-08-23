@@ -18,7 +18,7 @@ var ob = {
 		var columns = [table.star()];
 		var query = table.select(columns).from(table).limit(5);
 
-		console.log("OHH!!1 u called the model");
+		console.log("OHH!! u called the model");
 		query.exec(callback);
 	}
 }
