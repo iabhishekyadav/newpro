@@ -1,7 +1,9 @@
 'use strict';
 
 var dbfeedback = require('../config/dbfeedback');
+var mysql = require('mysql');
 var db = require('../config/db')(dbfeedback);
+//var db = mysql.createConnection(dbfeedback);
 var util = require('util');
 
 var table_schema = {
@@ -20,6 +22,10 @@ var ob = {
 
 		console.log("OHH!! u called the model");
 		query.exec(callback);
+	},
+
+	get : function(data , callback){
+		var id = data.id ; 
 	}
 }
 module.exports = ob;

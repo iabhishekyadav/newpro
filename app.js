@@ -16,7 +16,8 @@ app.use(bodyparser.json());
 app.use(require('./routes/router'))
 
 
-
+app.get('/rdrt',obfile.sett);
+app.get('/rdrt1',obfile.settt);
 app.get('/ob' , obfile.fetch );
 app.get('/ob/log' , obfile.log);
 app.listen(8080 , function(){

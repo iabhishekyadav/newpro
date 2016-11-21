@@ -36,8 +36,22 @@ var obdata = {
 
 	log : function(req , res){
 		ob.view(req , res , console.log);
+	},
+
+	get : function(req , res){
+		var options = {
+			'id' : 2
+		}
+		ob.get(options , cb);
+
+		function cb(err,result){
+			if(err)console.log('found error in get model');
+			else
+				console.log('results are' , result);
+		}
 	}
-}
+};
+
 module.exports = obdata;
 
 if(require.main === module){
